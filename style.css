@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Nabvar */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+}
+.nav .left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.nav .left img{
+    width: 50px;
+    margin: 0px 10px;
+}
+.nav .left input{
+    border:1px solid blueviolet;
+    height: 40px;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+.nav .left input::after{
+    border:2px solid blueviolet;
+}
+.nav .right ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+.nav .right ul li {
+    margin: 0px 2px;
+    padding: 10px 14px;
+    border-radius:25px ;
+    transition: all 0.3s ease-out;
+}
+.nav .right ul li:hover{
+    background-color: rgb(215, 209, 240);
+}
+.nav .right ul li a{
+    text-decoration: none;
+}
+.nav .right ul li a{
+    color: blueviolet;
+    font-size: 30px;
+}
+
+/* Main */
+.main{
+    margin: 20px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.main .draw-field{
+    width: 80%;
+    height: 100%;
+}
+.main .draw-field #myCanvas{
+    height: 100%;
+    width: 100%;
+    box-shadow: -1px 1px 5px 3px blueviolet;
+    cursor:crosshair;
+    color : rgb(86, 149, 203);
+}
+.main .tools-field{
+    height: 80%;
+    width: 15%;
+    margin-left: 30px;
+    box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.15);
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .tools-field .col-1{
+    height: 15%;
+    margin : 5px 3px 2px 3px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main .tools-field .button {
+    border: none;
+    align-self: center;
+    width: 40px;
+    height: 30px;
+    color: blueviolet;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 15px;
+    background-color: white;
+}
+.main .tools-field .button:hover{
+    background-color: rgb(215, 209, 240);
+}
+.main .tools-field .button i{
+    font-size: 20px;
+}
+.main .tools-field .col-2{
+    height: 60%;
+    margin :  3px 2px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .tools-field .color-field{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid rgb(237, 233, 233);
+    margin-top: 3px;
+    cursor: pointer;
+ }
+ .main .tools-field .color-field:hover{
+    border: 2px solid blueviolet;
+ }
+ .main .tools-field .active{
+    border: 5px solid rgb(5, 0, 9);
+}
+.main .tools-field .col-3{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.color-picker{
+    align-self: center;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.pen-range{
+    align-self: center;
+    margin: 0 15px;
+    cursor: pointer;
+}

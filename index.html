@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrawIt | WhiteBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="left">
+            <img src="./Assets/Untitled design.png" alt="icon" title="icon" srcset="">
+            <input type="text" id="name"  value="Untitled" placeholder="Project Name">
+        </div>
+        <div class="right">
+            <ul>
+                <li onclick="download()"><a href="" ><i class="fa fa-floppy-o" aria-hidden="true"></i></a></li>
+                <li onclick="clear_canvas()"><a href=""><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="draw-field">
+            <canvas id="myCanvas">
+              Sorry, your browser does not support HTML5 canvas technology.
+            </canvas>
+        </div>
+        <div class="tools-field">
+            <div class="col-1">
+                <button onclick="undo_text()" type="button" class="button" title="Undo">
+                  <i class="fa fa-undo" aria-hidden="true"></i>
+                </button>
+                <button onclick="clear_canvas()" type="button" class="button" title="Clear">
+                  <i class="fa fa-refresh" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="col-2">
+                <div
+                  onclick="change_color(this)"
+                  class="color-field"
+                  style="background: red"
+                  title="Select Red"
+                ></div>
+                <div
+                  onclick="change_color(this)"
+                  class="color-field"
+                  style="background: rgb(251, 255, 0)"
+                  title="Select Yellow"
+                ></div>
+                <div
+                  onclick="change_color(this)"
+                  class="color-field"
+                  style="background: rgb(0, 255, 98)"
+                  title="Select Green"
+                ></div>
+                <div
+                  onclick="change_color(this)"
+                  class="color-field active"
+                  style="background: rgb(250, 248, 248)"
+                  title="Select White"
+                ></div>
+                <div
+                  onclick="change_color(this)"
+                  class="color-field"
+                  style="background: rgb(47, 8, 187)"
+                  title="Select Blue"
+                ></div>
+              </div>
+              <div class="col-3">
+                <input
+                  onInput="draw_color = this.value"
+                  type="color"
+                  class="color-picker"
+                  title="Select Colour"
+                />
+                <input
+                  onInput="draw_width = this.value"
+                  type="range"
+                  min="0"
+                  max="100"
+                  class="pen-range"
+                  title="Select Pen Size"
+                /> 
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
